@@ -1,10 +1,12 @@
 "use client";
 
 import { useTheme } from "@/components/theme-provider";
+import { clientSideFunction } from "@/utils/client-utils";
 
 export default function ClientRoute() {
     const theme = useTheme();
+    const result = clientSideFunction();
       return (
-        <p style={{ color: theme.colors.primary }}>Use context provider example</p>
+        <h1>Client route {result}</h1>
       );
 }
